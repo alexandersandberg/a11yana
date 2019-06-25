@@ -1,0 +1,25 @@
+{
+  "name": "a11yana",
+  "version": "0.0.1",
+  "description": "",
+  "main": "a11yana.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandersandberg/a11yana.git"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "css",
+    "inclusive-design"
+  ],
+  "author": "Alexander Sandberg <hi@alexandersandberg.com> (https://alexandersandberg.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexandersandberg/a11yana/issues"
+  },
+  "homepage": "https://github.com/alexandersandberg/a11yana#readme"
+}
