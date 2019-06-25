@@ -1,8 +1,8 @@
 {
   "modules": true,
   "plugins": {
-    "autoprefixer": {
-      "grid": true
-    }
+    "autoprefixer": true,
+    "stylelint": true,
+    "postcss-reporter": true
   }
 }
