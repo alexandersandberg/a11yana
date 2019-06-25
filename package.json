@@ -4,7 +4,7 @@
   "description": "",
   "main": "a11yana.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -14,12 +14,17 @@
     "accessibility",
     "a11y",
     "css",
-    "inclusive-design"
+    "inclusive-design",
+    "minimal"
   ],
   "author": "Alexander Sandberg <hi@alexandersandberg.com> (https://alexandersandberg.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexandersandberg/a11yana/issues"
   },
-  "homepage": "https://github.com/alexandersandberg/a11yana#readme"
+  "homepage": "https://github.com/alexandersandberg/a11yana#readme",
+  "devDependencies": {
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
 }
