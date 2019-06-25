@@ -1,8 +1,0 @@
-{
-  "modules": true,
-  "plugins": {
-    "autoprefixer": true,
-    "stylelint": true,
-    "postcss-reporter": true
-  }
-}

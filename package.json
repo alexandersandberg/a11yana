@@ -5,8 +5,10 @@
   "main": "a11yana.css",
   "scripts": {
     "clean": "rm -rf dist",
-    "dev": "parcel src/index.html --open",
-    "build": "npm run clean && parcel build src/index.html"
+    "autoprefix": "postcss src/*.css --use autoprefixer -d dist/",
+    "merge": "cat src/*.css > dist/a11yana.css",
+    "minify": "cleancss dist/a11yana.css -o dist/a11yana.min.css",
+    "build": "npm run clean && npm run autoprefix && npm run merge && npm run minify"
   },
   "repository": {
     "type": "git",
@@ -27,10 +29,8 @@
   "homepage": "https://github.com/alexandersandberg/a11yana#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.0",
-    "parcel-bundler": "^1.12.3",
-    "postcss-modules": "^1.4.1",
-    "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0"
+    "clean-css-cli": "^4.3.0",
+    "postcss-cli": "^6.1.2"
   },
   "browserslist": [
     "last 2 versions",
