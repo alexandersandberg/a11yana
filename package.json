@@ -2,7 +2,8 @@
   "name": "a11yana",
   "version": "0.0.1",
   "description": "",
-  "main": "a11yana.css",
+  "main": "dist/a11yana.min.css",
+  "style": "dist/a11yana.min.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexandersandberg/a11yana.git"
