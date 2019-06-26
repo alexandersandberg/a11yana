@@ -29,11 +29,11 @@
     "rimraf": "^2.6.3"
   },
   "scripts": {
-    "clean": "rimraf dist && mkdir dist",
+    "clean": "rimraf dist",
     "postcss": "cat src/*.css | postcss -o dist/a11yana.css",
     "minify": "postcss -u cssnano -o dist/a11yana.min.css dist/a11yana.css -m",
-    "build": "npm run postcss && npm run minify",
-    "watch": "npm run build && onchange \"src/*.css\" -- npm run build"
+    "build": "npm run postcss && npm run minify && echo \"📦 Finished building\"",
+    "dev": "npm run build -s && onchange \"src/*.css\" -- npm run build -s \">\" {{changed}} \"(\"{{event}}\")\""
   },
   "browserslist": [
     "last 1 version",
