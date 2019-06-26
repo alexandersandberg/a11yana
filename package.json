@@ -3,13 +3,6 @@
   "version": "0.0.1",
   "description": "",
   "main": "a11yana.css",
-  "scripts": {
-    "clean": "rm -rf dist",
-    "autoprefix": "postcss src/*.css --use autoprefixer -d dist/",
-    "merge": "cat src/*.css > dist/a11yana.css",
-    "minify": "cleancss dist/a11yana.css -o dist/a11yana.min.css",
-    "build": "npm run clean && npm run autoprefix && npm run merge && npm run minify"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexandersandberg/a11yana.git"
@@ -28,14 +21,20 @@
   },
   "homepage": "https://github.com/alexandersandberg/a11yana#readme",
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
-    "clean-css-cli": "^4.3.0",
-    "postcss-cli": "^6.1.2"
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^6.1.2",
+    "postcss-preset-env": "^6.6.0",
+    "rimraf": "^2.6.3"
+  },
+  "scripts": {
+    "clean": "rimraf dist && mkdir dist",
+    "postcss": "cat src/*.css | postcss > dist/a11yana.css",
+    "minify": "postcss -u cssnano -o dist/a11yana.min.css dist/a11yana.css",
+    "build": "npm run clean && npm run postcss && npm run minify"
   },
   "browserslist": [
-    "last 2 versions",
+    "last 1 version",
     "> 0.5%",
-    "Firefox ESR",
     "not dead"
   ]
 }
