@@ -28,8 +28,8 @@
   },
   "scripts": {
     "clean": "rimraf dist && mkdir dist",
-    "postcss": "cat src/*.css | postcss > dist/a11yana.css",
-    "minify": "postcss -u cssnano -o dist/a11yana.min.css dist/a11yana.css",
+    "postcss": "cat src/*.css | postcss -o dist/a11yana.css",
+    "minify": "postcss -u cssnano -o dist/a11yana.min.css dist/a11yana.css -m",
     "build": "npm run clean && npm run postcss && npm run minify"
   },
   "browserslist": [
