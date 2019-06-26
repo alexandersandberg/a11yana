@@ -23,6 +23,7 @@
   "homepage": "https://github.com/alexandersandberg/a11yana#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "onchange": "^6.0.0",
     "postcss-cli": "^6.1.2",
     "postcss-preset-env": "^6.6.0",
     "rimraf": "^2.6.3"
@@ -31,7 +32,8 @@
     "clean": "rimraf dist && mkdir dist",
     "postcss": "cat src/*.css | postcss -o dist/a11yana.css",
     "minify": "postcss -u cssnano -o dist/a11yana.min.css dist/a11yana.css -m",
-    "build": "npm run clean && npm run postcss && npm run minify"
+    "build": "npm run postcss && npm run minify",
+    "watch": "npm run build && onchange \"src/*.css\" -- npm run build"
   },
   "browserslist": [
     "last 1 version",
