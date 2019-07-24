@@ -1,0 +1,22 @@
+/* ----- Variables ----- */
+
+/* Light mode default, dark mode if recognized as preferred */
+:root {
+	--background-main: #fefefe;
+	--background-element: #eee;
+	--background-inverted: #282a36;
+	--text-main: #1f1f1f;
+	--text-alt: #333;
+	--text-inverted: #fefefe;
+	--border-element: #282a36;
+	--theme: #7a283a;
+	--theme-light: hsl(0, 25%, 65%);
+	--theme-dark: hsl(0, 25%, 45%);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background-main: #282a36;
+    --text-main: #fefefe;
+  }
+} */

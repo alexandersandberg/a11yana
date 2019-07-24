@@ -1,0 +1,8 @@
+/* ----- Base ----- */
+
+body {
+	margin: auto;
+	max-width: 36rem;
+	min-height: 100%;
+	overflow-x: hidden;
+}

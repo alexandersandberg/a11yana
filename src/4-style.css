@@ -1,0 +1,66 @@
+/* ----- Layout ----- */
+
+body {
+	background: var(--background-main);
+	color: var(--text-main);
+}
+
+a {
+	color: var(--theme);
+	text-decoration: underline;
+}
+
+a:hover {
+	color: var(--theme-light);
+}
+
+a:active {
+	color: var(--theme-dark);
+}
+
+:focus {
+	outline: 3px solid var(--theme-light);
+	outline-offset: 3px;
+}
+
+::selection {
+	background: var(--theme-light);
+	color: var(--text-inverted);
+}
+
+input {
+	background: var(--background-element);
+	padding: 0.5rem 0.65rem;
+	border-radius: 0.5rem;
+	border: 2px solid var(--border-element);
+	font-size: 1rem;
+}
+
+mark {
+	background: pink; /* change to proper color, based on theme */
+	padding: 0.1em 0.15em;
+}
+
+kbd, /* different style for kbd? */
+code {
+	background: #eee;
+	padding: 0.1em 0.25em;
+	border-radius: 0.2rem;
+	box-decoration-break: clone;
+}
+
+kbd > kbd {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+pre {
+	tab-size: 4;
+}
+
+pre code {
+	display: block;
+	padding: 0.3em 0.7em;
+	word-break: normal;
+	overflow-x: auto;
+}

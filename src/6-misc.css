@@ -1,0 +1,38 @@
+/* ----- Misc ----- */
+
+[tabindex="-1"]:focus {
+	outline: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+[aria-disabled],
+[disabled] {
+	cursor: not-allowed !important;
+	pointer-events: none !important;
+}
+
+/*
+	Style anchor links only
+*/
+a[href^='#']::after {
+	content: '';
+}
+
+/*
+	Skip link
+*/
+body > a:first-child {
+	background: var(--theme);
+	border-radius: 0.2rem;
+	color: var(--text-inverted);
+	padding: 0.3em 0.5em;
+	position: absolute;
+	top: -10rem;
+}
+
+body > a:first-child:focus {
+	top: 1rem;
+}
