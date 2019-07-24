@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard",
+	"rules": {
+    "declaration-block-no-duplicate-properties": null,
+		"at-rule-no-vendor-prefix": null,
+		"media-feature-name-no-vendor-prefix": null,
+		"property-no-vendor-prefix": null,
+		"selector-no-vendor-prefix": null,
+		"value-no-vendor-prefix": null,
+		"indentation": "tab",
+	}
+}

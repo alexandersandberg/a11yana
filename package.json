@@ -9,11 +9,12 @@
     "url": "git+https://github.com/alexandersandberg/a11yana.git"
   },
   "keywords": [
+    "css",
     "accessibility",
     "a11y",
-    "css",
-    "inclusive-design",
-    "minimal"
+    "minimal",
+    "css-framework",
+    "classless"
   ],
   "author": "Alexander Sandberg <hi@alexandersandberg.com> (https://alexandersandberg.com)",
   "license": "MIT",
@@ -26,13 +27,16 @@
     "onchange": "^6.0.0",
     "postcss-cli": "^6.1.2",
     "postcss-preset-env": "^6.6.0",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0"
   },
   "scripts": {
     "clean": "rimraf dist",
+    "stylelint": "stylelint \"src/*.css\"",
     "postcss": "cat src/*.css | postcss -o dist/a11yana.css",
     "minify": "postcss -u cssnano -o dist/a11yana.min.css dist/a11yana.css -m",
-    "build": "npm run postcss && npm run minify && echo \"📦 Finished building\"",
+    "build": "npm run stylelint && npm run postcss && npm run minify && echo \"📦 Finished building\"",
     "dev": "npm run build -s && onchange \"src/*.css\" -- npm run build -s \">\" {{changed}} \"(\"{{event}}\")\""
   },
   "browserslist": [
