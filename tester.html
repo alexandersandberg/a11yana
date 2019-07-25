@@ -5,40 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML5 elements tester</title>
-  <link rel="stylesheet" id="stylesheet">
-  <style>
-    #css-selection {
-      position: fixed;
-      right: 0;
-      background: #eee;
-      padding: 1em;
-      color: #1f1f1f;
-      max-width: 300px;
-    }
-  </style>
+	<link rel="stylesheet" href="dist/a11yana.css">
 </head>
 <body id="body">
   <a href="#main">Skip to main content</a>
-
-  <aside id="css-selection">
-    <div>
-      <label for="select-css">Select CSS</label>
-      <select name="select-css" id="select-css">
-        <option value="">No CSS (browser defaults)</option>
-        <optgroup label="CSS Resets" id="select-css-resets">
-        </optgroup>
-        <optgroup label="CSS Frameworks" id="select-css-frameworks">
-        </optgroup>
-      </select>
-    </div>
-    <div>
-      <form action="" id="custom-css-form">
-        <label for="custom-css-input">Custom CSS</label>
-        <input type="text" id="custom-css-input" placeholder="A link to your custom CSS file">
-        <input type="submit" value="Apply CSS">
-      </form>
-    </div>
-  </aside>
 
   <header>
     <h1>HTML5 elements tester</h1>
@@ -954,73 +924,5 @@ background: aliceblue;
   <footer>
     <p><a href="https://github.com/alexandersandberg/html5-elements-tester">HTML5 elements tester</a> by <a href="https://alexandersandberg.com">Alexander Sandberg</a> · <a href="#body">Back to top 👆</a></p>
   </footer>
-
-  <script>
-      const stylesheet = document.getElementById('stylesheet');
-      const selectCss = document.getElementById('select-css');
-      const selectCssResets = document.getElementById('select-css-resets');
-      const selectCssFrameworks = document.getElementById('select-css-frameworks');
-      const customCssForm = document.getElementById('custom-css-form');
-
-      const cssResets = [
-        { "name": "Eric Meyer's 2.0", "link": "https://meyerweb.com/eric/tools/css/reset/reset.css" },
-				{ "name": "HTML5 Doctor", "link": "https://raw.githack.com/richclark/HTML5resetCSS/master/reset.css" },
-        { "name": "minireset.css", "link": "https://raw.githack.com/jgthms/minireset.css/master/minireset.min.css" },
-        { "name": "normalize.css", "link": "https://unpkg.com/normalize.css@8.0.1/normalize.css" },
-				{ "name": "Reboot", "link": "https://cdn.jsdelivr.net/npm/bootstrap-reboot@4.3.1/dist/reboot.min.css" },
-        { "name": "Remedy", "link": "https://raw.githack.com/mozdevs/cssremedy/master/remedy.css" },
-        { "name": "sanitize.css", "link": "https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/10.0.0/sanitize.css" },
-        { "name": "UndoHTML", "link": "https://tantek.com/log/2004/undohtml.css" },
-        { "name": "universalize.css", "link": "https://raw.githack.com/alexandersandberg/universalize.css/master/dist/universalize.min.css" },
-      ];
-
-      const cssFrameworks = [
-        { "name": "awsm.css", "link": "https://raw.githack.com/igoradamenko/awsm.css/master/dist/awsm.min.css" },
-        { "name": "Bahunya", "link": "https://raw.githack.com/kimeiga/bahunya/css/bahunya-0.1.3.css" },
-				{ "name": "Bootstrap", "link": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" },
-				{ "name": "Bulma", "link": "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" },
-        { "name": "Foundation", "link": "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css" },
-        { "name": "Kacit", "link": "https://raw.githack.com/Kimeiga/kacit/b3f813ed/kacit.min.css" },
-				{ "name": "Materialize", "link": "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" },
-        { "name": "Marx", "link": "https://unpkg.com/marx-css/css/marx.min.css" },
-				{ "name": "no-class", "link": "https://davidpaulsson.github.io/no-class/css/no-class.min.css" },
-				{ "name": "Pure", "link": "https://unpkg.com/purecss@1.0.1/build/pure-min.css" },
-        { "name": "Sakura", "link": "https://unpkg.com/sakura.css/css/sakura.css" },
-        { "name": "Sakura Vader", "link": "https://unpkg.com/sakura.css/css/sakura-vader.css" },
-        { "name": "Semantic UI", "link": "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" },
-				{ "name": "Tachyons", "link": "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" },
-        { "name": "Tacit", "link": "https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.0.min.css" },
-        { "name": "Tufte", "link": "https://raw.githack.com/edwardtufte/tufte-css/gh-pages/tufte.min.css" },
-				{ "name": "Tailwind", "link": "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" },
-        { "name": "Water.css (light)", "link": "https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css" },
-        { "name": "Water.css (dark)", "link": "https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css" },
-        { "name": "Writ", "link": "https://writ.cmcenroe.me/writ.min.css" },
-      ];
-
-      const populateSelect = (list, target) => {
-        list.forEach(item => {
-          const option = document.createElement('option');
-          option.textContent = item.name;
-          option.value = item.link;
-          target.appendChild(option);
-        });
-      }
-
-      populateSelect(cssResets, selectCssResets);
-      populateSelect(cssFrameworks, selectCssFrameworks);
-
-      const changeCss = link => {
-        stylesheet.setAttribute('href', link);
-      }
-
-      selectCss.addEventListener('change', e => {
-        changeCss(e.target.value);
-      });
-
-      customCssForm.addEventListener('submit', e => {
-        e.preventDefault();
-        changeCss(e.target[0].value);
-      });
-    </script>
 </body>
 </html>
