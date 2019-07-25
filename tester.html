@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5 elements tester</title>
+  <link rel="stylesheet" id="stylesheet">
+  <style>
+    #css-selection {
+      position: fixed;
+      right: 0;
+      background: #eee;
+      padding: 1em;
+      color: #1f1f1f;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body id="body">
+  <a href="#main">Skip to main content</a>
+
+  <aside id="css-selection">
+    <div>
+      <label for="select-css">Select CSS</label>
+      <select name="select-css" id="select-css">
+        <option value="">No CSS (browser defaults)</option>
+        <optgroup label="CSS Resets" id="select-css-resets">
+        </optgroup>
+        <optgroup label="CSS Frameworks" id="select-css-frameworks">
+        </optgroup>
+      </select>
+    </div>
+    <div>
+      <form action="" id="custom-css-form">
+        <label for="custom-css-input">Custom CSS</label>
+        <input type="text" id="custom-css-input" placeholder="A link to your custom CSS file">
+        <input type="submit" value="Apply CSS">
+      </form>
+    </div>
+  </aside>
+
+  <header>
+    <h1>HTML5 elements tester</h1>
+		<p>A test page containing most of the HTML5 elements that you'll ever need. Useful for testing CSS resets or CSS frameworks.</p>
+		<p>A project by <a href="https://alexandersandberg.com">Alexander Sandberg</a> · <a href="https://github.com/alexandersandberg/html5-elements-tester">GitHub repository</a></p>
+  </header>
+
+  <main id="main">
+    <nav id="nav">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#sections">Sections</a></li>
+        <li><a href="#grouping-content">Grouping content</a></li>
+        <li><a href="#text-level-semantics">Text-level semantics</a></li>
+        <li><a href="#edits">Edits</a></li>
+        <li><a href="#embedded-content">Embedded content</a></li>
+        <li><a href="#tabular-data">Tabular data</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#interactive-elements">Interactive elements</a></li>
+        <li><a href="#scripting">Scripting</a></li>
+      </ul>
+    </nav>
+    <section id="sections">
+      <header>
+        <h2>Sections</h2>
+        <p>Elements: <code>&lt;body&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;h1&gt;–&lt;h6&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;h1&gt;–&lt;h6&gt;</code>:</h3>
+        </header>
+
+        <!--
+        Note that, in this context, this use of <h*>s is not of appropriate
+          (accessible) rank, but used for testing purposes.
+        -->
+        <h1><code>&lt;h1&gt;</code> A unique title, specific for the page</h1>
+        <h2><code>&lt;h2&gt;</code> Heading levels should reflect structure, not style</h2>
+        <p>It can also be useful to test how body text below a heading appears on the page, for example to check the margin. This text is wrapped in &lt;p&gt; and is a direct sibling to the above &lt;h2&gt;.</p>
+        <h3><code>&lt;h3&gt;</code> If you need a visually smaller title, use CSS</h3>
+        <p>To create a semantically correct HTML structure that's accessible for everyone, make sure you're nesting the headings correctly. Never use more than one &lt;h1&gt; per page, and don't skip heading levels.</p>
+        <h4><code>&lt;h4&gt;</code> Headings below level 4 are not used as much</h4>
+        <h5><code>&lt;h5&gt;</code> But that doesn't mean you should forget about them</h5>
+        <h6><code>&lt;h6&gt;</code> And last, but not least, the heading with the lowest rank</h6>
+      </article>
+
+      <article id="article">
+        <header id="header">
+          <h3><code>&lt;body&gt; + &lt;article&gt; + &lt;section&gt; + &lt;nav&gt; + &lt;aside&gt; + &lt;header&gt; + &lt;footer&gt;</code>:</h3>
+        </header>
+
+        <p>All these tags are already in use on the page. The list below contains links to each use case. See the source code of this file for more details.</p>
+        <ul>
+          <li><a href="#body"><code>&lt;body&gt;</code></a></li>
+          <li><a href="#article"><code>&lt;article&gt;</code></a></li>
+          <li><a href="#sections"><code>&lt;section&gt;</code></a></li>
+          <li><a href="#nav"><code>&lt;nav&gt;</code></a></li>
+          <li><a href="#aside"><code>&lt;aside&gt;</code></a></li>
+          <li><a href="#header"><code>&lt;header&gt;</code></a></li>
+          <li><a href="#footer"><code>&lt;footer&gt;</code></a></li>
+        </ul>
+      </article>
+
+      <footer id="footer">
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="grouping-content">
+      <header>
+        <h2>Grouping content</h2>
+        <p>Elements: <code>&lt;p&gt;</code>, <code>&lt;address&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;div&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;p&gt;</code>:</h3>
+        </header>
+
+        <p>Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields. [1]</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;address&gt;</code>:</h3>
+        </header>
+
+        <address>
+          Name: Alexander Sandberg<br>
+          Street adress: 1 Rover street<br>
+          State: N/A<br>
+          Planet: Mars<br>
+          Digital home: <a href="https://alexandersandberg.com">alexandersandberg.com</a><br>
+        </address>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;hr&gt;</code>:</h3>
+        </header>
+
+        <hr>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;pre&gt;</code>:</h3>
+        </header>
+
+        <pre>Preformatted text
+          will be presented
+    exactly as written
+          in the         HTML file.
+        </pre>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;blockquote&gt;</code>:</h3>
+        </header>
+
+        <blockquote>
+          <p>The text inside this blockquote is wrapped in <code>&lt;p&gt;</code> tags. Sometimes the quote is really long, and possibly have to occupy multiple lines, but that shouldn't be a problem.</p>
+        </blockquote>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;ol&gt; + &lt;ul&gt; + &lt;li&gt;</code>:</h3>
+        </header>
+
+        <ol>
+          <li>List item 1</li>
+          <li>List item 2
+            <ol>
+              <li>List item 1</li>
+            </ol>
+          </li>
+          <li>List item 3
+            <ul>
+              <li>List item 1</li>
+              <li>List item 2
+                <ul>
+                  <li>List item 1
+                    <ol>
+                      <li>List item 1</li>
+                      <li>List item 2</li>
+                    </ol>
+                  </li>
+                  <li>List item 2</li>
+                </ul>
+              </li>
+              <li>List item 3</li>
+            </ul>
+          </li>
+          <li>List item 4</li>
+        </ol>
+        <ul>
+          <li>List item 1
+            <ul>
+              <li>List item 1
+                <ul>
+                  <li>List item 1</li>
+                </ul>
+              </li>
+              <li>List item 2</li>
+            </ul>
+          </li>
+          <li>List item 2</li>
+          <li>List item 3
+            <ol>
+              <li>List item 1</li>
+              <li>List item 2</li>
+            </ol>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;dl&gt; + &lt;dt&gt; + &lt;dd&gt;</code>:</h3>
+        </header>
+
+        <dl>
+          <dt>This is a term</dt>
+          <dd>And this is the accompanying description, explaining the above term.</dd>
+          <dd>You can also have multiple descriptions (<code>&lt;dt&gt;</code>), like this one, for each term (<code>&lt;dt&gt;</code>).</dd>
+          <dd>And why not nest lists inside this description?
+            <dl>
+              <dt>Another term</dt>
+              <dd>With some description.</dd>
+            </dl>
+            <ul>
+                <li>List item 1</li>
+              </ul>
+              <ol>
+                <li>List item 1</li>
+                <li>List item 2</li>
+              </ol>
+          </dd>
+        </dl>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;figure&gt; + &lt;figcaption&gt;</code>:</h3>
+        </header>
+
+        <p>Used with an <code>&lt;img&gt;</code>:</p>
+        <figure>
+          <img src="https://placekeanu.com/600/300" alt="Keanu Reeves looking fine">
+          <figcaption>Wholesome Keanu Reeves from <a href="https://placekeanu.com" target="_blank">placekeanu.com</a>.</figcaption>
+        </figure>
+
+        <p>Used with a <code>&lt;blockquote&gt;</code>:</p>
+        <figure>
+          <blockquote>
+            <p>Seek wealth, not money or status. Wealth is having assets that earn while you sleep. Money is how we transfer time and wealth. Status is your place in the social hierarchy.</p>
+          </blockquote>
+
+          <figcaption>
+            <cite>Naval Ravikant (@naval)</cite> on <a href="https://twitter.com/naval/status/1002103497725173760">Twitter</a>.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;main&gt;</code>:</h3>
+        </header>
+
+        <p>See the <a href="#main">main content</a> of this page for a use case of <code>&lt;main&gt;</code>.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;div&gt;</code>:</h3>
+        </header>
+
+        <div>
+          <p>This paragraph of text is contained inside a <code>&lt;div&gt;</code>. The element really has no special meaning, other than grouping content together, and should be used as a last resort when no other element is suitable.</p>
+        </div>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="text-level-semantics">
+      <header>
+        <h2>Text-level semantics</h2>
+        <p>Elements: <code>&lt;a&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;small&gt;</code>, <code>&lt;s&gt;</code>, <code>&lt;cite&gt;</code>, <code>&lt;q&gt;</code>, <code>&lt;dfn&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;ruby&gt;</code>, <code>&lt;rb&gt;</code>, <code>&lt;rt&gt;</code>, <code>&lt;rtc&gt;</code>, <code>&lt;rp&gt;</code>, <code>&lt;data&gt;</code>, <code>&lt;time&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;var&gt;</code>, <code>&lt;samp&gt;</code>, <code>&lt;kbd&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;bdi&gt;</code>, <code>&lt;bdo&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;wbr&gt;</code></p>
+      </header>
+
+      <article id="a">
+        <header>
+          <h3><code>&lt;a&gt;</code>:</h3>
+        </header>
+
+        <p>Here is <a href="#a">a link</a> inside a paragraph of text. Below you can find a list of links with different <code>href</code> attributes.</p>
+        <ul>
+          <li><a href="https://github.com/alexandersandberg/html5-elements-tester">Link to an external website</a></li>
+          <li><a href="#a">Anchor link to this element</a></li>
+          <li><a href="">Link with an empty <code>href</code> attribute</a></li>
+          <li><a>Link missing an <code>href</code> attribute</a></li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;em&gt; + &lt;i&gt; + &lt;strong&gt; + &lt;b&gt;</code>:</h3>
+        </header>
+
+        <p>The <code>&lt;em&gt;</code> element represents <em>stress emphasis</em> of its contents. Meanwhile, <code>&lt;i&gt;</code> is since HTML5 used for text in an alternative voice or mood, or otherwise offset from the <i>normal prose</i>, as you may define it.</p>
+        <p>If you want to <b>draw attention</b> to some text, feel free to use <code>&lt;b&gt;</code>. However, if you want to mark the importance of something, <strong>you should use <code>&lt;strong&gt;</code></strong>.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;small&gt; + &lt;u&gt; + &lt;mark&gt; + &lt;s&gt;</code>:</h3>
+        </header>
+
+        <p><small>When you want your text to represent small print, use <code>&lt;small&gt;</code>.</small></p>
+        <p>In most cases, there's a better element than <code>&lt;u&gt;</code> to use, but it can be useful for labelling <u>msispelt</u> text. Avoid using it, however, where the text could be confused for a hyperlink.</p>
+        <p>You can <mark>highlight text</mark> for reference purposes with <code>&lt;mark&gt;</code>, or if the contents is <s>no longer accurate or relevant</s>, wrap it with <code>&lt;s&gt;</code>.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;abbr&gt; + &lt;dfn&gt;</code>:</h3>
+        </header>
+
+        <p>By wrapping an abbreviation like <dfn><abbr title="Cascading Style Sheets">CSS</abbr></dfn> in both <code>&lt;dfn&gt;</code> and <code>&lt;abbr&gt;</code>, we define the term. This can later be used only using <code>&lt;abbr&gt;</code>, since we already defined <abbr title="Cascading Style Sheets">CSS</abbr> once before.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;q&gt; + &lt;cite&gt; + &lt;data&gt; + &lt;time&gt;</code>:</h3>
+        </header>
+
+        <p>When citing creative work, include the reference with a <code>&lt;cite&gt;</code> element. <cite>www.w3.org</cite> explains that <q>A citation is not a quote (for which the <code>&lt;q&gt;</code> element is appropriate)</q> instead, like used here.</p>
+        <p>If you want to link content with a <data value="123">machine-readable</data> translation, use <code>&lt;data&gt;</code> with a <code>value</code> attribute. However, if this data is a time- or date-related, like the date <time datetime="2019-07-04">July 4</time>, you have to use <code>&lt;time&gt;</code> together with the <code>datatime</code> attribute.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;code&gt; + &lt;var&gt; + &lt;samp&gt; + &lt;kbd&gt; + &lt;sub&gt; + &lt;sup&gt;</code>:</h3>
+        </header>
+
+        <p>When sharing code-snippets, make sure to use the <code>&lt;code&gt;</code> element. This can be done both <code>display: inline;</code>, as well as block-level:</p>
+        <pre><code>* {
+color: rebeccapurple;
+background: aliceblue;
+}</code></pre>
+        <p>Variables should be surrounded by <code>&lt;var&gt;</code>, or <var>x</var> amount of people might be confused.</p>
+        <p>Sample or quotes output are represented with <code>&lt;samp&gt;</code>: <samp>Your expression '1 + 1' equals 2</samp>.</p>
+        <p>To represent user input, like the shortcut <kbd><kbd>Cmd</kbd> + <kbd>R</kbd></kbd> on macOS, use <code>&lt;kbd&gt;</code>.</p>
+        <p>If you want to <sub>subscript</sub> or <sup>superscript</sup> text, use <code>&lt;sub&gt;</code> or <code>&lt;sup&gt;</code>.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;bdi&gt; + &lt;bdo&gt; + &lt;ruby&gt; + &lt;rb&gt; + &lt;rt&gt; + &lt;rtc&gt; + &lt;rp&gt;</code>:</h3>
+        </header>
+
+        <p>Consider using <code>&lt;bdi&gt;</code> when working with bidirectional content, like the names <bdi>Alexander</bdi> and <bdi>علي‎</bdi>.</p>
+        <p>If you need to override the bidirectional algorithm for some content and its children, use <code>&lt;bdo&gt;</code>:</p>
+        <p><bdo dir="rtl">Don't forget to specify the <code>dir</code> attribute!</bdo></p>
+        <p><bdo dir="ltr">I said, don't forget to specify the <code>dir</code> attribute!</bdo></p>
+        <p>Some use of <code>&lt;ruby&gt;</code> and its related elements:</p>
+        <ruby>
+          漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+          字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+        </ruby>
+        <br>
+        <ruby><rb>旧<rb>金<rb>山<rt>jiù<rt>jīn<rt>shān<rtc>San Francisco</ruby>
+        <p>More information about the explanation and usage of these can be <a href="https://www.w3.org/TR/2017/REC-html52-20171214/single-page.html#the-ruby-element" target="_blank">read here on www.w3.org</a>.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;span&gt; + &lt;br&gt; + &lt;wbr&gt;</code>:</h3>
+        </header>
+
+        <p>A <code>&lt;span&gt;</code> can be used to mark up inline text for various uses, <span style="font-weight: bolder;">here to make the text bolder</span>.</p>
+        <p>If you have really long text you might want to insert a<br>blank line with the <code>&lt;br&gt;</code> element. You can also insert word breaking opportunities using <code>&lt;wbr&gt;</code>, to help the browser break long words like Pneumonoultramicro<wbr>scopicsilico<wbr>volcanoconiosis.
+        </p>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="edits">
+      <header>
+        <h2>Edits</h2>
+        <p>Elements: <code>&lt;ins&gt;</code>, <code>&lt;del&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;ins&gt; + &lt;del&gt;</code>:</h3>
+        </header>
+
+        <p>If you make a <del>really huge</del> mistake, you can always go back and fix it later. <ins>And don't forget to learn from your mistake.</ins></p>
+        <ins><p>Both <code>&lt;ins&gt;</code> and <code>&lt;del&gt;</code> can be block-level, like this.</p></ins>
+        <del><p>Here's a block-level paragraph removal.</p></del>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="embedded-content">
+      <header>
+        <h2>Embedded content</h2>
+        <p>Elements: <code>&lt;picture&gt;</code>, <code>&lt;source&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;track&gt;</code>, <code>&lt;map&gt;</code>, <code>&lt;area&gt;</code>, <code>&lt;math&gt;</code>, <code>&lt;svg&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;img&gt; + &lt;svg&gt;</code>:</h3>
+        </header>
+
+        <img src="https://placekeanu.com/600/250/g" alt="Keanu Reeves looking fine">
+        <svg height="250" width="510">
+          <polygon points="220,10 300,210 200,245 123,234" style="fill:tomato;stroke:rebeccapurple;stroke-width:5" />
+          This is a fallback message. If you see this, your browser does not support inline SVG.
+        </svg>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;picture&gt; + &lt;source&gt;</code>:</h3>
+        </header>
+
+        <p>A different image will be shown depending on viewport size.</p>
+        <picture>
+          <source srcset="https://placekeanu.com/800/400/y" media="(min-width: 1200px)">
+          <img src="https://placekeanu.com/400/300" alt="Keanu Reeves looking fine">
+        </picture>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;iframe&gt;</code>:</h3>
+        </header>
+
+        <iframe src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=New%20york+(HTML5%20Elements%20Tester)&amp;ie=UTF8&amp;t=k&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;embed&gt;</code>:</h3>
+        </header>
+
+        <embed src="http://techslides.com/demos/samples/sample.webm" type="video/webm">
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;object&gt; + &lt;param&gt;</code>:</h3>
+        </header>
+
+        <object data="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" type="application/pdf">
+          <param name="parameter" value="example">
+        </object>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;video&gt; + &lt;audio&gt; + &lt;track&gt;</code>:</h3>
+        </header>
+
+        <audio controls src="https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3">
+          <p>This is a fallback text. If you see this, your browser does not support embedded audio.</p>
+        </audio>
+        <p>Audio is from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">an example on MDN</a>.</p>
+        <video controls width="400">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/examples/friday.mp4" type="video/mp4">
+          <track default kind="captions" srclang="en" src="https://interactive-examples.mdn.mozilla.net/media/examples/friday.vtt">
+          <p>This is a fallback text. If you see this, your browser does not support embedded videos.</p>
+        </video>
+        <p>Video and subtitles are from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">an example on MDN</a>.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;map&gt; + &lt;area&gt;</code>:</h3>
+        </header>
+
+        <p>Each side of the image below is linked to different anchors on this page. Give it a try!</p>
+        <map name="image-map" id="image-map">
+          <area shape="circle" coords="75,75,75" href="#image-map">
+          <area shape="circle" coords="275,75,75" href="#body">
+        </map>
+        <img usemap="#image-map" src="https://placekeanu.com/350/150/y" alt="Keanu Reeves looking fine">
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;math&gt;</code>:</h3>
+        </header>
+
+        <p>The quadratic formula is:<br>
+          <math>
+            <mi>x</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+              <mo form="prefix">-</mo> <mi>b</mi>
+              <mo>±</mo>
+              <msqrt>
+                <msup> <mi>b</mi> <mn>2</mn> </msup>
+                <mo>-</mo>
+                <mn>4</mn> <mo>⁢</mo> <mi>a</mi> <mo>⁢</mo> <mi>c</mi>
+              </msqrt>
+              </mrow>
+              <mrow>
+              <mn>2</mn> <mo>⁢</mo> <mi>a</mi>
+              </mrow>
+            </mfrac>
+          </math>
+        </p>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="tabular-data">
+      <header>
+        <h2>Tabular data</h2>
+        <p>Elements: <code>&lt;table&gt;</code>, <code>&lt;caption&gt;</code>, <code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;table&gt; + &lt;caption&gt; + &lt;colgroup&gt; + &lt;col&gt;+ &lt;tbody&gt; + &lt;thead&gt; + &lt;tfoot&gt; + &lt;tr&gt; + &lt;td&gt; + &lt;th&gt;</code>:</h3>
+        </header>
+
+        <table>
+          <caption>This is the table caption</caption>
+          <colgroup>
+            <col>
+            <col span="2">
+            <col span="1">
+          </colgroup>
+          <thead>
+            <tr>
+              <th><code>&lt;thead&gt;</code></th>
+              <th>2nd colgroup</th>
+              <th>2nd colgroup</th>
+              <th>3rd colgroup</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><code>&lt;tbody&gt;</code></th>
+              <td colspan="2">This is a cell spanning two columns</td>
+              <td>Last column</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row"><code>&lt;tfoot&gt;</code></th>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+              <td>Cell 4</td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="forms">
+      <header>
+        <h2>Forms</h2>
+        <p>Elements: <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;datalist&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;form&gt; + &lt;label&gt; + &lt;input&gt; + &lt;button&gt; + &lt;select&gt; + &lt;datalist&gt; + &lt;optgroup&gt; + &lt;option&gt; + &lt;textarea&gt; + &lt;fieldset&gt; + &lt;legend&gt;</code>:</h3>
+        </header>
+
+        <form action="#forms">
+          <fieldset>
+            <legend>Welcome to the form</legend>
+            <p>
+              <label for="input-hidden">
+                Hidden: <input type="hidden" id="input-hidden">
+              </label>
+            </p>
+            <p>
+              <label for="input-text">
+                Text: <input type="text" id="input-text">
+              </label>
+            </p>
+            <p>
+              <label for="input-text-readonly">
+                Text (readonly): <input type="text" id="input-text-readonly" value="You can't change this" readonly>
+              </label>
+            </p>
+            <p>
+              <label for="input-text-disabled">
+                Text (disabled): <input type="text" id="input-text-disabled" value="This is not available" disabled>
+              </label>
+            </p>
+            <p>
+              <label for="input-search">
+                Search: <input type="search" id="input-search">
+              </label>
+            </p>
+            <p>
+              <label for="input-tel">
+                Telephone: <input type="tel" id="input-tel">
+              </label>
+            </p>
+            <p>
+              <label for="input-url">
+                URL: <input type="url" id="input-url">
+              </label>
+            </p>
+            <p>
+              <label for="input-email">
+                Email: <input type="email" id="input-email">
+              </label>
+            </p>
+            <p>
+              <label for="input-password">
+                Password: <input type="password" id="input-password">
+              </label>
+            </p>
+            <p>
+              <label for="input-date">
+                Date: <input type="date" id="input-date">
+              </label>
+            </p>
+            <p>
+              <label for="input-month">
+                Month: <input type="month" id="input-month">
+              </label>
+            </p>
+            <p>
+              <label for="input-week">
+                Week: <input type="week" id="input-week">
+              </label>
+            </p>
+            <p>
+              <label for="input-time">
+                Time: <input type="time" id="input-time">
+              </label>
+            </p>
+            <p>
+              <label for="input-datetime-local">
+                Datetime-local: <input type="datetime-local" id="input-datetime-local">
+              </label>
+            </p>
+            <p>
+              <label for="input-number">
+                Number: <input type="number" id="input-number">
+              </label>
+            </p>
+            <p>
+              <label for="input-range">
+                Range: <input type="range" id="input-range">
+              </label>
+            </p>
+            <p>
+              <label for="input-color">
+                Color: <input type="color" id="input-color">
+              </label>
+            </p>
+            <p>
+              <label for="input-checkbox-1">
+                Checkbox 1: <input type="checkbox" id="input-checkbox-1" name="checkbox">
+              </label>
+              <label for="input-checkbox-2">
+                Checkbox 2: <input type="checkbox" id="input-checkbox-2" name="checkbox">
+              </label>
+              <label for="input-checkbox-3">
+                Checkbox 3 (disabled): <input type="checkbox" id="input-checkbox-3" name="checkbox" disabled>
+              </label>
+            </p>
+            <p>
+              <label for="input-radio-1">
+                Radio 1: <input type="radio" id="input-radio-1" name="radio">
+              </label>
+              <label for="input-radio-2">
+                Radio 2: <input type="radio" id="input-radio-2" name="radio">
+              </label>
+              <label for="input-radio-3">
+                Radio 3 (disabled): <input type="radio" id="input-radio-3" name="radio" disabled>
+              </label>
+            </p>
+            <p>
+              <label for="select">
+                Select: <select name="select" id="select">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label for="select-size">
+                Select (size): <select name="select-size" id="select-size" size=5>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                  <option value="6">Option 6</option>
+                  <option value="7">Option 7</option>
+                  <option value="8">Option 8</option>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label for="select-multiple">
+                Select (multiple): <select name="select-multiple" id="select-multiple" multiple>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label for="select-optgroup">
+                Select with optgroup: <select name="select-optgroup" id="select-optgroup">
+                  <optgroup label="Group 1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                  </optgroup>
+                  <optgroup label="Group 2">
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                  </optgroup>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label for="datalist">
+                Datalist:
+                <input name="datalist" list="datalist">
+                <datalist id="datalist">
+                  <option value="Option 1">
+                  <option value="Option 2">
+                  <option value="Option 3">
+                  <option value="Option 4">
+                </datalist>
+              </label>
+            </p>
+            <p>
+              <label for="textarea">
+                Textarea: <textarea name="textarea" id="textarea"></textarea>
+              </label>
+            </p>
+            <p>
+              <label for="input-file">
+                File (single): <input type="file" id="input-file">
+              </label>
+            </p>
+            <p>
+              <label for="input-file-multiple">
+                File (multiple): <input type="file" id="input-file-multiple" multiple>
+              </label>
+            </p>
+            <p>
+              <label for="input-submit">
+                Submit: <input type="submit" id="input-submit">
+              </label>
+            </p>
+            <p>
+              <label for="input-image">
+                Image button: <input type="image" id="input-image" src="https://placekeanu.com/100/40">
+              </label>
+            </p>
+            <p>
+              <label for="input-reset">
+                Reset: <input type="reset" id="input-reset">
+              </label>
+            </p>
+            <p>
+              <label for="input-button">
+                Button: <input type="button" id="input-button" value="I'm an input with type=button">
+              </label>
+            </p>
+            <p>
+              <button type="button">I'm a <code>&lt;button&gt;</code></button>
+            </p>
+          </fieldset>
+        </form>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;output&gt;</code>:</h3>
+        </header>
+
+        <form onsubmit="return false" oninput="o.value = a.valueAsNumber + b.valueAsNumber">
+          <fieldset>
+            <legend>Testing the <code>&lt;output&gt;</code> element</legend>
+            <input name=a type=number step=any> +
+            <input name=b type=number step=any> =
+            <output name=o for="a b"></output>
+            <p>Code is taken from <a href="https://www.w3.org/TR/2017/REC-html52-20171214/single-page.html#example-5b22c23a" target="_blank">this example by W3</a>.</p>
+          </fieldset>
+        </form>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;progress&gt; + &lt;meter&gt;</code>:</h3>
+        </header>
+
+        <form action="#forms">
+          <fieldset>
+            <legend>Testing <code>&lt;progress&gt;</code> and <code>&lt;meter&gt;</code></legend>
+            <p>
+              <label for="progress">
+                Progress: <progress id="progress" max="100" value="64">64%</progress>
+              </label>
+            </p>
+            <p>
+              <label for="meter-2">
+                Meter (ok): <meter id="meter-2" max="100" low="30" high="80" optimum="50" value="50">50/100</meter>
+              </label>
+            </p>
+            <p>
+              <label for="meter-1">
+                Meter (warning): <meter id="meter-1" max="100" low="30" high="80" optimum="50" value="20">20/100</meter>
+              </label>
+            </p>
+            <p>
+              <label for="meter-3">
+                Meter (critical): <meter id="meter-3" max="100" low="60" high="70" value="90">80/100</meter>
+              </label>
+            </p>
+          </fieldset>
+        </form>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="interactive-elements">
+      <header>
+        <h2>Interactive elements</h2>
+        <p>Elements: <code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code>, <code>&lt;dialog&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;details&gt; + &lt;summary&gt;</code>:</h3>
+        </header>
+
+        <details>
+          <summary>This can be expanded</summary>
+          <p>And by doing so, more information is revealed.</p>
+        </details>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;dialog&gt;</code>:</h3>
+        </header>
+
+        <dialog>
+          <p>This text is inside a <code>&lt;dialog&gt;</code> box! It should be hidden by default, and shown to the user when given an <code>open</code> attribute.</p>
+        </dialog>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+
+    <section id="scripting">
+      <header>
+        <h2>Scripting</h2>
+        <p>Elements: <code>&lt;script&gt;</code>, <code>&lt;noscript&gt;</code>, <code>&lt;template&gt;</code>, <code>&lt;canvas&gt;</code></p>
+      </header>
+
+      <article>
+        <header>
+          <h3><code>&lt;script&gt; + &lt;noscript&gt;</code>:</h3>
+        </header>
+
+        <p>Dynamic scripts and data blocks are included with the <code>&lt;script&gt;</code> element.</p>
+        <script>
+          document.write('<p>This paragraph was generated with JavaScript!</p>');
+        </script>
+        <p>If scripting is disabled when loading the page, content inside <code>&lt;noscript&gt;</code> is used instead.</p>
+        <noscript>
+          <p>I see you disabled JavaScript!</p>
+        </noscript>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;template&gt;</code>:</h3>
+        </header>
+
+        <p>Below this paragraph, there's a <code>&lt;template&gt;</code> element containing a HTML declaration, that can be used by scripts.</p>
+        <template>
+          <p>Hi! I'm a paragraph inside the <code>&lt;template&gt;</code> element.</p>
+        </template>
+      </article>
+
+      <article>
+        <header>
+          <h3><code>&lt;canvas&gt;</code>:</h3>
+        </header>
+
+        <p>A <code>&lt;script&gt;</code> is used to draw a rectangle in the <code>&lt;canvas&gt;</code> below.</p>
+        <canvas id="canvas">
+          Alternative text explaining what's on display in this &lt;canvas&gt;.
+        </canvas>
+        <script>
+          var canvas = document.getElementById('canvas');
+          var ctx = canvas.getContext('2d');
+          ctx.fillStyle = 'tomato';
+          ctx.fillRect(10, 10, 100, 100);
+        </script>
+      </article>
+
+      <footer>
+        <a href="#body">Back to top 👆</a>
+      </footer>
+    </section>
+  </main>
+
+  <aside id="aside">
+    <h2>About this project</h2>
+    <p>A test page containing most of the HTML5 elements that you'll ever need. Useful for testing CSS resets or CSS frameworks.</p>
+    <p>This section is inside an <code>&lt;aside&gt;</code> element.</p>
+  </aside>
+
+  <footer>
+    <p><a href="https://github.com/alexandersandberg/html5-elements-tester">HTML5 elements tester</a> by <a href="https://alexandersandberg.com">Alexander Sandberg</a> · <a href="#body">Back to top 👆</a></p>
+  </footer>
+
+  <script>
+      const stylesheet = document.getElementById('stylesheet');
+      const selectCss = document.getElementById('select-css');
+      const selectCssResets = document.getElementById('select-css-resets');
+      const selectCssFrameworks = document.getElementById('select-css-frameworks');
+      const customCssForm = document.getElementById('custom-css-form');
+
+      const cssResets = [
+        { "name": "Eric Meyer's 2.0", "link": "https://meyerweb.com/eric/tools/css/reset/reset.css" },
+				{ "name": "HTML5 Doctor", "link": "https://raw.githack.com/richclark/HTML5resetCSS/master/reset.css" },
+        { "name": "minireset.css", "link": "https://raw.githack.com/jgthms/minireset.css/master/minireset.min.css" },
+        { "name": "normalize.css", "link": "https://unpkg.com/normalize.css@8.0.1/normalize.css" },
+				{ "name": "Reboot", "link": "https://cdn.jsdelivr.net/npm/bootstrap-reboot@4.3.1/dist/reboot.min.css" },
+        { "name": "Remedy", "link": "https://raw.githack.com/mozdevs/cssremedy/master/remedy.css" },
+        { "name": "sanitize.css", "link": "https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/10.0.0/sanitize.css" },
+        { "name": "UndoHTML", "link": "https://tantek.com/log/2004/undohtml.css" },
+        { "name": "universalize.css", "link": "https://raw.githack.com/alexandersandberg/universalize.css/master/dist/universalize.min.css" },
+      ];
+
+      const cssFrameworks = [
+        { "name": "awsm.css", "link": "https://raw.githack.com/igoradamenko/awsm.css/master/dist/awsm.min.css" },
+        { "name": "Bahunya", "link": "https://raw.githack.com/kimeiga/bahunya/css/bahunya-0.1.3.css" },
+				{ "name": "Bootstrap", "link": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" },
+				{ "name": "Bulma", "link": "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" },
+        { "name": "Foundation", "link": "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css" },
+        { "name": "Kacit", "link": "https://raw.githack.com/Kimeiga/kacit/b3f813ed/kacit.min.css" },
+				{ "name": "Materialize", "link": "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" },
+        { "name": "Marx", "link": "https://unpkg.com/marx-css/css/marx.min.css" },
+				{ "name": "no-class", "link": "https://davidpaulsson.github.io/no-class/css/no-class.min.css" },
+				{ "name": "Pure", "link": "https://unpkg.com/purecss@1.0.1/build/pure-min.css" },
+        { "name": "Sakura", "link": "https://unpkg.com/sakura.css/css/sakura.css" },
+        { "name": "Sakura Vader", "link": "https://unpkg.com/sakura.css/css/sakura-vader.css" },
+        { "name": "Semantic UI", "link": "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" },
+				{ "name": "Tachyons", "link": "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" },
+        { "name": "Tacit", "link": "https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.0.min.css" },
+        { "name": "Tufte", "link": "https://raw.githack.com/edwardtufte/tufte-css/gh-pages/tufte.min.css" },
+				{ "name": "Tailwind", "link": "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" },
+        { "name": "Water.css (light)", "link": "https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css" },
+        { "name": "Water.css (dark)", "link": "https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css" },
+        { "name": "Writ", "link": "https://writ.cmcenroe.me/writ.min.css" },
+      ];
+
+      const populateSelect = (list, target) => {
+        list.forEach(item => {
+          const option = document.createElement('option');
+          option.textContent = item.name;
+          option.value = item.link;
+          target.appendChild(option);
+        });
+      }
+
+      populateSelect(cssResets, selectCssResets);
+      populateSelect(cssFrameworks, selectCssFrameworks);
+
+      const changeCss = link => {
+        stylesheet.setAttribute('href', link);
+      }
+
+      selectCss.addEventListener('change', e => {
+        changeCss(e.target.value);
+      });
+
+      customCssForm.addEventListener('submit', e => {
+        e.preventDefault();
+        changeCss(e.target[0].value);
+      });
+    </script>
+</body>
+</html>
