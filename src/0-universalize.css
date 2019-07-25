@@ -122,6 +122,7 @@ samp {
 		/* Windows emoji */ "Segoe UI Emoji",
 		/* Windows emoji */ "Segoe UI Symbol",
 		/* Linux emoji */ "Noto Color Emoji"; /* 1 */
+
 	font-size: 1em; /* 2 */
 }
 
