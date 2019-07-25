@@ -1,5 +1,5 @@
 /*
-	universalize.css (v1.0.1) — by Alexander Sandberg (https://alexandersandberg.com)
+	universalize.css (v1.0.2) — by Alexander Sandberg (https://alexandersandberg.com)
 	------------------------------------------------------------------------------
 
 	Based on Sanitize.css (https://github.com/csstools/sanitize.css).
@@ -37,7 +37,7 @@
 	5. Prevent overflow from long words (all)
 */
 html {
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; /* 1 */
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; /* 1 */
 	font-size: 125%; /* 2 */
 	line-height: 1.6; /* 3 */
 	-webkit-text-size-adjust: 100%; /* 4 */
@@ -134,7 +134,7 @@ abbr[title] {
 	cursor: help; /* 1 */
 	text-decoration: underline; /* 2 */
 	-webkit-text-decoration: underline dotted;
-	text-decoration: underline dotted; /* 2 */
+	        text-decoration: underline dotted; /* 2 */
 }
 
 /*
@@ -450,7 +450,7 @@ h3 span,
 h4 span,
 h5 span,
 h6 span {
-	display: inline-block;
+	display: block;
 	font-size: 1em;
 	font-style: italic;
 	font-weight: normal;
