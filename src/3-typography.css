@@ -63,7 +63,7 @@ h3 span,
 h4 span,
 h5 span,
 h6 span {
-	display: inline-block;
+	display: block;
 	font-size: 1em;
 	font-style: italic;
 	font-weight: normal;
